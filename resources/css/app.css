@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  /* Custom Palette Colors */
+  --color-teal-primary: var(--teal-primary);
+  --color-teal-secondary: var(--teal-secondary);
+  --color-mustard: var(--mustard);
+  --color-bright-yellow: var(--bright-yellow);
+  --color-off-white: var(--off-white);
+  --color-mint-gray: var(--mint-gray);
+  --color-neutral-gray: var(--neutral-gray);
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+@layer base {
+  :root {
+    --background: #F8F9F7; /* Off White */
+    --foreground: #2D2D2D;
+    --card: #FFFFFF;
+    --card-foreground: #2D2D2D;
+    --popover: #FFFFFF;
+    --popover-foreground: #2D2D2D;
+    --primary: #076A68; /* Teal Utama */
+    --primary-foreground: #FFFFFF;
+    --secondary: #5B9A98; /* Teal Sekunder */
+    --secondary-foreground: #FFFFFF;
+    --muted: #B1CECB; /* Mint Gray */
+    --muted-foreground: #A6AAA9; /* Neutral Gray */
+    --accent: #FCCC4B; /* Mustard */
+    --accent-foreground: #076A68;
+    --destructive: #D9534F;
+    --destructive-foreground: #FFFFFF;
+    --border: #A6AAA9; /* Neutral Gray */
+    --input: #A6AAA9; /* Neutral Gray */
+    --ring: #076A68; /* Teal Utama */
+    --radius: 12px;
+
+    /* Custom palette variables */
+    --teal-primary: #076A68;
+    --teal-secondary: #5B9A98;
+    --mustard: #FCCC4B;
+    --bright-yellow: #FEC93D;
+    --off-white: #F8F9F7;
+    --mint-gray: #B1CECB;
+    --neutral-gray: #A6AAA9;
+  }
+
+  .dark {
+    --background: hsl(240 10% 3.9%);
+    --foreground: hsl(0 0% 98%);
+    --card: hsl(240 10% 3.9%);
+    --card-foreground: hsl(0 0% 98%);
+    --popover: hsl(240 10% 3.9%);
+    --popover-foreground: hsl(0 0% 98%);
+    --primary: hsl(0 0% 98%);
+    --primary-foreground: hsl(240 5.9% 10%);
+    --secondary: hsl(240 3.7% 15.9%);
+    --secondary-foreground: hsl(0 0% 98%);
+    --muted: hsl(240 3.7% 15.9%);
+    --muted-foreground: hsl(240 5% 64.9%);
+    --accent: hsl(240 3.7% 15.9%);
+    --accent-foreground: hsl(0 0% 98%);
+    --destructive: hsl(0 62.8% 30.6%);
+    --destructive-foreground: hsl(0 0% 98%);
+    --border: hsl(240 3.7% 15.9%);
+    --input: hsl(240 3.7% 15.9%);
+    --ring: hsl(240 4.9% 83.9%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Figtree', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
